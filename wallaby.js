@@ -1,4 +1,7 @@
 module.exports = wallaby => {
+  
+  process.env.VUE_CLI_BABEL_TRANSPILE_MODULES = true;
+  
   const compiler = wallaby.compilers.babel({
     presets: [["@vue/app", { modules: "commonjs" }]]
   });
